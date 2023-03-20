@@ -1,0 +1,17 @@
+Taskmanager komponens
+
+ - nameInputRef.current.focus(); fókusz hozzáadása a név inputhoz
+
+handleSubmit függvény
+
+- inputok ellenőrzése, ha üres akkor alert megjelenése
+- ha üres a lista akkor az else ág fut le
+- newTask objektum létrehozása a bejövő adatokból, és a setTasks-al hozzáadni a setTasks([...tasks, newTask]);-al a const [tasks, setTasks] = useLocalStorage("tasks", []);-hoz, ezzel a localStorage-ban tároljuk az adatot
+
+
+completeTask
+bejárom az egész task-ot map-el, ha az ietm id-je megegyezik a kapott id-vel, akkor visszatér a teljes item-el és a complete-ot true ra állítja
+
+
+Alert komponens
+props-ként emgkapja a az alert szöveget, classt-t és a bezáró gomb metódusát

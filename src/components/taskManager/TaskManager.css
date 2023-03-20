@@ -1,0 +1,44 @@
+body {
+  background-color: var(--color-primary);
+
+  /* avoid min-height to prevent glitches on css animation */
+}
+form.form input {
+  width: 73%;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--color-grey);
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+.complete {
+  position: relative;
+  background-color: var(--color-grey);
+  border-left: 5px solid red;
+}
+
+.complete::after {
+  content: "Completed";
+  position: absolute;
+  right: 3.5rem;
+  bottom: 10px;
+  background-color: red;
+  color: #fff;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 80px;
+}
